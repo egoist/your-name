@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const path = require('path')
 const cac = require('cac')
-const random = require('random-item')
 const termImg = require('term-img')
 const chalk = require('chalk')
 const Conf = require('conf')
