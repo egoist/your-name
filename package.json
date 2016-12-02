@@ -1,0 +1,46 @@
+{
+  "name": "your-name",
+  "version": "0.0.0",
+  "description": "君の名は。你的名字。your name.",
+  "license": "MIT",
+  "repository": "egoist/your-name",
+  "author": {
+    "name": "EGOIST",
+    "email": "0x142857@gmail.com",
+    "url": "github.com/egoist"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "eslint *.js"
+  },
+  "files": [
+    "cli.js",
+    "images"
+  ],
+  "bin": {
+    "your-name": "cli.js",
+    "yourname": "cli.js"
+  },
+  "keywords": [
+    ""
+  ],
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-rem": "latest",
+    "jest-cli": "^15.1.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "eslintConfig": {
+    "extends": "rem/esnext"
+  },
+  "dependencies": {
+    "cac": "^3.0.4",
+    "chalk": "^1.1.3",
+    "random-item": "^1.0.0",
+    "term-img": "^0.2.0"
+  }
+}
