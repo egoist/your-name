@@ -4,6 +4,9 @@ const cac = require('cac')
 const random = require('random-item')
 const termImg = require('term-img')
 const chalk = require('chalk')
+const Conf = require('conf')
+
+const config = new Conf()
 
 const cli = cac()
 
@@ -21,7 +24,10 @@ const names = [
 ]
 
 cli.command('*', 'Tell me your name;)', () => {
-  const your = random(names)
+  const prev = config.get('prev') || 0
+  config.set('prev', prev === 0 ? 1 : 0)
+  const your = names[prev]
+
   console.log(`${your.name} ${chalk.dim(`[${your.romaji}]`)}`)
   termImg(your.image, {height: '60%', fallback() {}})
 })
